@@ -1,15 +1,16 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-    firstName: 'Selene',
-    lastName:  'Yu',
+    firstName: 'Saharsh',
+    lastName:  'Goyal',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Design Engineer',
+    role:      'Lead Experience Engineer',
     avatar:    '/images/avatar.jpg',
-    location:  'Asia/Jakarta',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
+    location:  'Asia/India',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+    languages: ['ReactJS', 'React Native', 'NextJS', 'JEST', 'React Testing Library', 'GraphQL', 'NodeJS', 'Prompt Engineering'], // optional: Leave the array empty if you don't want to display languages
+    pronouns: 'he/him/his'  
 }
 
 const newsletter = {
@@ -24,22 +25,22 @@ const social = [
     {
         name: 'GitHub',
         icon: 'github',
-        link: 'https://github.com/once-ui-system/nextjs-starter',
+        link: 'https://github.com/saharshg',
     },
     {
         name: 'LinkedIn',
         icon: 'linkedin',
-        link: 'https://www.linkedin.com/company/once-ui/',
+        link: 'https://www.linkedin.com/in/saharshg10/',
     },
     {
-        name: 'X',
+        name: 'saharshg10',
         icon: 'x',
-        link: '',
+        link: 'https://twitter.com/saharshg10',
     },
     {
         name: 'Email',
         icon: 'email',
-        link: 'mailto:example@gmail.com',
+        link: 'mailto:saharshg10@gmail.com',
     },
 ]
 
@@ -47,8 +48,8 @@ const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Design engineer and builder</>,
-    subline: <>I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive<br/> user experiences. After hours, I build my own projects.</>
+    headline: <>Web and Mobile Engineer</>,
+    subline: <>I'm {person.firstName}, a {person.role} at <InlineCode>FLY</InlineCode>, where I craft intuitive<br/> user experiences. After hours, I build my own projects.</>
 }
 
 const about = {
@@ -64,62 +65,82 @@ const about = {
     },
     calendar: {
         display: true,
-        link: 'https://cal.com'
+        link: 'https://topmate.io/saharsh_goyal'
     },
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>Selene is a Jakarta-based design engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology.</>
+        description: <>Saharsh is a software engineer passionate for crafting seamless digital experiences. Renowned for being easy to work with, he fosters collaborative team environments. A strong advocate for simplicity and elegance in design, whether leading a team or diving into the code, he has a deep enthusiasm for continuous learning and being agile.</>
     },
     work: {
         display: true, // set to false to hide this section
         title: 'Work Experience',
         experiences: [
             {
-                company: 'FLY',
-                timeframe: '2022 - Present',
-                role: 'Senior Design Engineer',
+                company: 'Publicis Sapient',
+                timeframe: '2024 - Present',
+                role: 'Lead Experience Engineer',
                 achievements: [
-                    <>Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.</>,
-                    <>Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.</>
+                    // <>Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.</>,
+                    // <>Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.</>
                 ],
                 images: [ // optional: leave the array empty if you don't want to display images
-                    {
-                        src: '/images/projects/project-01/cover-01.jpg',
-                        alt: 'Once UI Project',
-                        width: 16,
-                        height: 9
-                    }
+                    // {
+                    //     src: '/images/projects/project-01/cover-01.jpg',
+                    //     alt: 'Once UI Project',
+                    //     width: 16,
+                    //     height: 9
+                    // }
                 ]
             },
             {
-                company: 'Creativ3',
-                timeframe: '2018 - 2022',
-                role: 'Lead Designer',
+                company: 'Infobeans',
+                timeframe: '2021 - 2024',
+                role: 'Module Lead',
                 achievements: [
-                    <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
-                    <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
+                    // <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
+                    // <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
+                ],
+                images: [ ]
+            },
+            {
+                company: 'Xebia',
+                timeframe: '2019 - 2021',
+                role: 'Software Consultant',
+                achievements: [
+                    // <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
+                    // <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
+                ],
+                images: [ ]
+            },
+            {
+                company: 'Systango',
+                timeframe: '2017 - 2019',
+                role: 'Associate Software Engineer',
+                achievements: [
+                    // <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
+                    // <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
                 ],
                 images: [ ]
             }
         ]
     },
     studies: {
-        display: true, // set to false to hide this section
+        display: false, // set to false to hide this section
         title: 'Studies',
         institutions: [
             {
-                name: 'University of Jakarta',
-                description: <>Studied software engineering.</>,
+                name: 'RGPV University',
+                description: <>Studied Computer Science engineering.</>,
             },
             {
-                name: 'Build the Future',
-                description: <>Studied online marketing and personal branding.</>,
+                name: 'SICA School',
+                description: <>Studied Senior secondary</>,
             }
         ]
     },
     technical: {
-        display: true, // set to false to hide this section
+        display: false, // set to false to hide this section
         title: 'Technical skills',
         skills: [
             {
@@ -158,7 +179,7 @@ const about = {
 
 const blog = {
     label: 'Blog',
-    title: 'Writing about design and tech...',
+    title: 'Writing about tech, work and life...',
     description: `Read what ${person.name} has been up to recently`
     // Create new blog posts by adding a new .mdx file to app/blog/posts
     // All posts will be listed on the /blog route
