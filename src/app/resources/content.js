@@ -9,7 +9,7 @@ const person = {
     role:      'Lead Experience Engineer',
     avatar:    '/images/avatar.jpg',
     location:  'Asia/India',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ['ReactJS', 'React Native', 'NextJS', 'JEST', 'React Testing Library', 'GraphQL', 'NodeJS', 'Prompt Engineering'], // optional: Leave the array empty if you don't want to display languages
+    languages: ['ReactJS', 'React Native', 'Redux', 'NextJS', 'JEST', 'React Testing Library', 'GraphQL', 'NodeJS', 'Prompt Engineering'], // optional: Leave the array empty if you don't want to display languages
     pronouns: 'he/him/his'  
 }
 

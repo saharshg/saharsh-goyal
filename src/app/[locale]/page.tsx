@@ -10,7 +10,7 @@ import {
   Text,
 } from '@/once-ui/components';
 import { baseURL, renderContent } from '@/app/resources';
-import TableOfContents from '@/components/about/TableOfContents';
+// import TableOfContents from '@/components/about/TableOfContents';
 import styles from '@/components/about/about.module.scss';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
@@ -58,28 +58,28 @@ export default function Home({
   unstable_setRequestLocale(locale);
   const t = useTranslations();
   const { person, about, social } = renderContent(t);
-  const structure = [
-    {
-      title: about.intro.title,
-      display: about.intro.display,
-      items: [],
-    },
-    {
-      title: about.work.title,
-      display: about.work.display,
-      items: about.work.experiences.map((experience) => experience.company),
-    },
-    {
-      title: about.studies.title,
-      display: about.studies.display,
-      items: about.studies.institutions.map((institution) => institution.name),
-    },
-    {
-      title: about.technical.title,
-      display: about.technical.display,
-      items: about.technical.skills.map((skill) => skill.title),
-    },
-  ];
+  // const structure = [
+  //   {
+  //     title: about.intro.title,
+  //     display: about.intro.display,
+  //     items: [],
+  //   },
+  //   {
+  //     title: about.work.title,
+  //     display: about.work.display,
+  //     items: about.work.experiences.map((experience) => experience.company),
+  //   },
+  //   {
+  //     title: about.studies.title,
+  //     display: about.studies.display,
+  //     items: about.studies.institutions.map((institution) => institution.name),
+  //   },
+  //   {
+  //     title: about.technical.title,
+  //     display: about.technical.display,
+  //     items: about.technical.skills.map((skill) => skill.title),
+  //   },
+  // ];
   return (
     <Flex fillWidth maxWidth='m' direction='column'>
       <script
@@ -231,87 +231,6 @@ export default function Home({
             >
               {about.intro.description}
             </Flex>
-          )}
-
-          {about.work.display && (
-            <>
-              <Heading
-                as='h2'
-                id={about.work.title}
-                variant='display-strong-s'
-                marginBottom='m'
-              >
-                {about.work.title}
-              </Heading>
-              <Flex direction='column' fillWidth gap='l' marginBottom='40'>
-                {about.work.experiences.map((experience, index) => (
-                  <Flex
-                    key={`${experience.company}-${experience.role}-${index}`}
-                    fillWidth
-                    direction='column'
-                  >
-                    <Flex
-                      fillWidth
-                      justifyContent='space-between'
-                      alignItems='flex-end'
-                      marginBottom='4'
-                    >
-                      <Text id={experience.company} variant='heading-strong-l'>
-                        {experience.company}
-                      </Text>
-                      <Text
-                        variant='heading-default-xs'
-                        onBackground='neutral-weak'
-                      >
-                        {experience.timeframe}
-                      </Text>
-                    </Flex>
-                    <Text
-                      variant='body-default-s'
-                      onBackground='brand-weak'
-                      marginBottom='m'
-                    >
-                      {experience.role}
-                    </Text>
-                    <Flex as='ul' direction='column' gap='16'>
-                      {experience.achievements.map(
-                        (achievement: string, index: any) => (
-                          <Text
-                            as='li'
-                            variant='body-default-m'
-                            key={`${experience.company}-${index}`}
-                          >
-                            {achievement}
-                          </Text>
-                        )
-                      )}
-                    </Flex>
-                    {experience.images.length > 0 && (
-                      <Flex fillWidth paddingTop='m' paddingLeft='40' wrap>
-                        {experience.images.map((image, index) => (
-                          <Flex
-                            key={index}
-                            border='neutral-medium'
-                            borderStyle='solid-1'
-                            radius='m'
-                            minWidth={image.width}
-                            height={image.height}
-                          >
-                            <SmartImage
-                              enlarge
-                              radius='m'
-                              sizes={image.width.toString()}
-                              alt={image.alt}
-                              src={image.src}
-                            />
-                          </Flex>
-                        ))}
-                      </Flex>
-                    )}
-                  </Flex>
-                ))}
-              </Flex>
-            </>
           )}
 
           {about.studies.display && (
