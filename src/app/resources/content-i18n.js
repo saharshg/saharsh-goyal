@@ -167,6 +167,12 @@ const createI18nContent = (t) => {
         // Create new project pages by adding a new .mdx file to app/blog/posts
         // All projects will be listed on the /home and /work routes
     }
+    const apps = {
+        label: t("apps.label"),
+        title: t("apps.title"),
+        description: t("apps.description", {name: person.name}),
+        all: t("apps.all"),
+    }
 
     const gallery = {
         label: t("gallery.label"),
@@ -254,6 +260,7 @@ const createI18nContent = (t) => {
         about,
         blog,
         work,
+        apps,
         gallery
     }
 };

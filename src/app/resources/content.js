@@ -193,6 +193,17 @@ const work = {
     // All projects will be listed on the /home and /work routes
 }
 
+const apps = {
+    label: 'Apps',
+    title: 'My apps',
+    description: `Apps created by ${person.name}`,
+    all: [{
+        url: 'https://sg-kinship.netlify.app/',
+        name: 'Kinship',
+        description: 'Create and share family trees with ease using Kinship',
+    }]
+}
+
 const gallery = {
     label: 'Gallery',
     title: 'My photo gallery',
@@ -272,4 +283,4 @@ const gallery = {
     ]
 }
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work, apps, gallery };

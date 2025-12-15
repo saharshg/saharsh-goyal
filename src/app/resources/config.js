@@ -13,6 +13,7 @@ const routes = {
     '/':        true,
     '/about':   false,
     '/work':    true,
+    '/apps': true,
     '/blog':    false,
     '/gallery': false,
 }

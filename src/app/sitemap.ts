@@ -20,6 +20,13 @@ export default async function sitemap() {
         }))
     );
 
+    let apps = locales.flatMap((locale) => 
+        getPosts(['src', 'app', '[locale]', 'apps', locale]).map((post) => ({
+            url: `${baseURL}/${locale}/apps/${post.slug}`,
+            lastModified: post.metadata.publishedAt,
+        }))
+    );
+
     let routes = locales.flatMap((locale)=> 
         ['', '/blog', '/work'].map((route) => ({
             url: `${baseURL}/${locale}${route}`,
@@ -27,5 +34,5 @@ export default async function sitemap() {
         }))
     );
 
-    return [...routes, ...blogs, ...works]
+    return [...routes, ...blogs, ...works,...apps]
 }
