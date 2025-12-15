@@ -200,6 +200,7 @@ const apps = {
     all: [{
         url: 'https://sg-kinship.netlify.app/',
         name: 'Kinship',
+        slug: 'kinship',
         description: 'Create and share family trees with ease using Kinship',
     }]
 }

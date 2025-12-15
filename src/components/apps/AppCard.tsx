@@ -3,6 +3,7 @@ import { Heading, Line, Row, SmartLink, Text } from "@once-ui-system/core";
 export type AppType = {
   name: string;
   url: string;
+  slug: string;
   description: string;
 };
 export const AppCard = ({ app }: { app: AppType }) => {
